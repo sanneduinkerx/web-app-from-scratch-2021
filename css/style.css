@@ -6,15 +6,16 @@ html{
     background: linear-gradient(90deg, rgba(34,0,27,1) 0%, rgba(119,9,121,1) 35%, rgba(0,212,255,1) 100%);  
 }
 
-
 body {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 10% 45% 45%;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
 }
 
 h1{
     grid-column: span 3;
+    font-size: 2.5em;
+    margin: 1em;
 }
 
 article {
@@ -27,10 +28,11 @@ article {
     flex-direction: column;
     margin: 1em;
     transition: 0.2s ease-out;
+    align-items: center;
 }
 
 article:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -44,4 +46,5 @@ article img{
     border-radius: 10px;
     margin: 2em 3em 0em 3em;
     box-shadow: rgb(36, 36, 36) 5px 5px 40px;
+    max-width: 15em
 }
