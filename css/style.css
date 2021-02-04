@@ -1,0 +1,47 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    /* source: https://cssgradient.io/ */
+    background: rgb(34,0,27);
+    background: linear-gradient(90deg, rgba(34,0,27,1) 0%, rgba(119,9,121,1) 35%, rgba(0,212,255,1) 100%);  
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 10% 45% 45%;
+}
+
+h1{
+    grid-column: span 3;
+}
+
+article {
+    /* source: https://cssgradient.io/ */
+    /* background: rgb(18,18,18);
+    background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(34,34,34,1) 100%); */
+    border-radius: 10px; 
+    /* box-shadow: rgb(36, 36, 36) 5px 5px 40px; */
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    transition: 0.2s ease-out;
+}
+
+article:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+article p{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em;
+}
+
+article img{
+    border-radius: 10px;
+    margin: 2em 3em 0em 3em;
+    box-shadow: rgb(36, 36, 36) 5px 5px 40px;
+}

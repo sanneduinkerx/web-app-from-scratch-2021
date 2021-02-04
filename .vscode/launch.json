@@ -5,25 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Attach to Chrome",
-            "port": 9222,
-            "request": "attach",
-            "type": "pwa-chrome",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
-            "type": "java",
-            "name": "Launch with Arguments Prompt",
+            "name": "Launch Chrome",
             "request": "launch",
-            "mainClass": "",
-            "args": "${command:SpecifyProgramArgs}"
-        },
-        {
             "type": "pwa-chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
         }
+
+        
     ]
 }
