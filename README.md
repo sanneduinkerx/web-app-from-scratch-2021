@@ -1,6 +1,12 @@
 # Web App From Scratch @cmda-minor-web 2020 - 2021
 
-In this course you will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API of your choice, manipulated and finally shown in the UI of the App. You will learn different ways to structure code and develop your own coding style. With the gained knowledge you will be able to build interactive prototypes, based on real data. Also you will gain a better understanding of how API's, frameworks and libraries work.
+In this course i learn to build a web application with vanilla HTML, CSS and Javascript. I will learn how to retrieve data from an API of my own choosing.
+
+## chosen API - Music API LastFM
+
+I've chosen the LastFM API and load the top albums from artists. The user can search for favorite artists and get top albums from that artist. Info about the API can be found [here](https://www.last.fm/api/show/artist.getTopAlbums)
+
+You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scratch-2021/)
 
 ## Learning goals
 
@@ -12,17 +18,20 @@ In this course you will learn to build a web application without frameworks or u
 [Rubric](https://docs.google.com/spreadsheets/d/1vJJ4EhIqkefWj1nWFp0Pnvy1Kld-S2V3qwZgC6XQO0c/edit?usp=sharing), with learning goals
 [Overall planning](https://teams.microsoft.com/l/file/95EAEC95-4AB8-4E62-A810-2445969460B6?tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7&fileType=xlsx&objectUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt%2FShared%20Documents%2F02%20-%20Web%20App%20From%20Scratch%2FWAFS%202021%20Planning.xlsx&baseUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt&serviceName=teams&threadId=19:9bd8abc7b32c4e0196ddbaae12cf8e79@thread.tacv2&groupId=5d001f9a-0a4b-4768-92b1-0f1768328ba3)
 
-## Program
+## Proces
 
 ### Week 1 - Hello API 🐒
+<!-- Goal: Retrieve data from an API and render it in an overview page. -->
 
-Goal: Retrieve data from an API and render it in an overview page.
+This week I retrieved data from the LastFM API and rendered it in an overview page. As example i used ACDC to get all their top albums. i didn't put an input field, put i do want to put that in the web app. So the user can search different artists.
 
-[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-2021/blob/master/course/week-1.md)
+![](img/week1.png)
 
-[Slides](https://docs.google.com/presentation/d/1hXfgIhBzJ2QXDmpKpMcx7G-a9R_fVrcPdeOyM3G0I00/edit?usp=sharing)
+<!-- [Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-2021/blob/master/course/week-1.md)
 
-### Week 2 - Design and Refactor 🛠
+[Slides](https://docs.google.com/presentation/d/1hXfgIhBzJ2QXDmpKpMcx7G-a9R_fVrcPdeOyM3G0I00/edit?usp=sharing) -->
+
+<!-- ### Week 2 - Design and Refactor 🛠
 
 Goal: Design the web app. Add routes and states. Split code into modules. Rendering detail page.
 
@@ -40,7 +49,11 @@ Manipulate data. Reflect on end result
 [Slides](https://docs.google.com/presentation/d/1yZi-ODpENKHMr0-kpKmnCI6dGSgXS9oeLxMXCJnieic/edit?usp=sharing)
 
 ## Best Practices
-All work during this course will be tested against our [Best Practices for JavaScript](https://github.com/cmda-minor-web/best-practices/blob/master/javascript.md).
+All work during this course will be tested against our [Best Practices for JavaScript](https://github.com/cmda-minor-web/best-practices/blob/master/javascript.md). -->
+
+
+
+
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
