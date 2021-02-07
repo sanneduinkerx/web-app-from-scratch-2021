@@ -1,9 +1,10 @@
 html{
     font-family: 'Roboto', sans-serif;
     color: white;
+
     /* source: https://cssgradient.io/ */
-    background: rgb(34,0,27);
     background: linear-gradient(90deg, rgba(34,0,27,1) 0%, rgba(119,9,121,1) 35%, rgba(0,212,255,1) 100%);  
+    /* voor later, bewegende achtergrond gradiant https://codepen.io/P1N2O/pen/pyBNzX*/
 }
 
 body {
