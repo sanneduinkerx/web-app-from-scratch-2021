@@ -1,57 +1,54 @@
-// ---------------------------------- API ophalen -------------------------- //
 
-// Feedback: zet comments neer voor eigen duidelijkheid, niet in onload data meteen erin, fetch beter dan XML request, write separate functions not in onload 
-
-const request = new XMLHttpRequest(); // use fetch instead
-
-//url with values method, artist and API key
-const endpoint = 'https://ws.audioscrobbler.com/2.0/?method=';
-const method = 'artist.gettopalbums';
-let artist = 'acdc'; // let, because later on the value can change to a different artist on request from user
-const apiKey = '9445b881096d29d7c6de9f9d2eb6b50d';
-let url = `${endpoint}${method}&artist=${artist}&api_key=${apiKey}&format=json`; // let because values change within url later
-
-// select body for later, later on will change
+// selecting elements in DOM
+const searchInput = document.querySelector('input'); 
+const searchForm = document.querySelector('form');
 const section = document.querySelector('section');
 
-//get data and load it
-request.open('GET', url, true);
-request.send();
+// eventlistener on form, when searching a keyword: source, Victor Boucher and Lisa Oude Elferink
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // search meaning
+    fetchAlbums(searchInput.value); // the keyword typed into the input field by the user, the artist
+});
 
-request.onload = function() {
-    const data = JSON.parse(this.response);
-    console.log(data);
+function fetchAlbums(searchKeyword) {
 
-    retrieveData(data);
+    // url api
+    const endpoint = 'https://ws.audioscrobbler.com/2.0/?method=';
+    const method = 'artist.gettopalbums';
+    const apiKey = '9445b881096d29d7c6de9f9d2eb6b50d';
+    const url = `${endpoint}${method}&artist=${searchKeyword}&api_key=${apiKey}&format=json`; // in the url the artists value is de input that the user searched for
+
+    // getting the data with fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            renderHTML(data);
+        });
 };
 
-// Render loaded data in HTML elements with function
+function renderHTML(data){
 
-function retrieveData(data){
+    data.topalbums.album.forEach(function (loading) {
 
-    //if https request didnt work error message, source: https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
+        // creating elements in HTML doc for the data  
+        const article = document.createElement('article');
+        const p = document.createElement('p');
+        const img = document.createElement('img');
 
-    if(request.status >= 200 && request.status < 400){
+        // filling source image and paragraph with name of album and image of album
+        p.textContent = loading.name;
+        img.src = loading.image[3]['#text'];
 
-        data.topalbums.album.forEach(function (loading) {
+        // appending elements in html
+        section.appendChild(article);
+        article.appendChild(img);
+        article.appendChild(p);
+    });
+    
+}
 
-                // creating elements in HTML doc for the data  
-                const article = document.createElement('article');
-                const p = document.createElement('p');
-                const img = document.createElement('img');
 
-                // filling source image and paragraph with name of album and image of album
-                p.textContent = loading.name;
-                img.src = loading.image[3]['#text'];
 
-                // appending elements in html
-                section.appendChild(article);
-                article.appendChild(img);
-                article.appendChild(p);
-            });
-    } else{
-        // if something went wrong to load data you get an error message
-        console.log('error');
-    };
 
-};
+
