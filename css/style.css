@@ -6,29 +6,73 @@ html{
     background: linear-gradient(90deg, rgba(34,0,27,1) 0%, rgba(119,9,121,1) 35%, rgba(0,212,255,1) 100%);  
     /* voor later, bewegende achtergrond gradiant https://codepen.io/P1N2O/pen/pyBNzX*/
 }
-
-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-h1{
-    font-size: 2.5em;
-    margin: 1em;
-}
-
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-content: space-around;
+    justify-content: space-between;
 }
 
-form {
+header h1{
+    font-size: 2.5em;
+    margin: 1em;
+}
+/* form */
+
+header form {
     margin: 1em;
 }
 
-article {
+header form input{
+    background-color: rgb(43, 43, 43);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 1em;
+    font-size: 1,1em;
+    box-shadow: rgb(36, 36, 36) 5px 5px 40px;
+}
+
+header form input:focus {
+    outline: none;
+    background: rgb(75, 75, 75)
+}
+
+header form button {
+    padding: 1em;
+    background-color: rgb(255, 168, 7);
+    border: none;
+    border-radius: 50%;
+    transition: 0.2s ease;
+    box-shadow: rgb(36, 36, 36) 5px 5px 40px;
+}
+
+header form button:hover {
+    background-color: rgb(199, 152, 65);
+    cursor: pointer;
+}
+
+header form button:focus {
+    background-color: rgb(199, 152, 65);
+    outline: none;
+}
+
+header form button img{
+    width: 1em;
+}
+
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+main section p:first-of-type{
+    grid-column: span 3;
+    text-align: center;
+}
+
+main article {
     /* source: https://cssgradient.io/ */
     /* background: rgb(18,18,18);
     background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(34,34,34,1) 100%); */
@@ -41,18 +85,18 @@ article {
     align-items: center;
 }
 
-article:hover{
+main article:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
 
-article p{
+main article p{
     text-transform: uppercase;
     text-align: center;
     padding: 1em;
 }
 
-article img{
+main article img{
     border-radius: 10px;
     margin: 2em 3em 0em 3em;
     box-shadow: rgb(36, 36, 36) 5px 5px 40px;
@@ -61,4 +105,28 @@ article img{
 
 footer{
     text-align: center;
+}
+
+@media (max-width: 69em) {
+    main section {
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    main section p:first-of-type{
+        grid-column: span 2;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 45em) {
+    main section {
+        grid-template-columns: 1fr ;
+    }
+
+    main section p:first-of-type{
+        grid-column: span 1;
+        text-align: center;
+    }
 }
