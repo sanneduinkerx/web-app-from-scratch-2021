@@ -7,15 +7,24 @@ html{
     /* voor later, bewegende achtergrond gradiant https://codepen.io/P1N2O/pen/pyBNzX*/
 }
 
-body {
+section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr; */
 }
 
 h1{
-    grid-column: span 3;
     font-size: 2.5em;
+    margin: 1em;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+}
+
+form {
     margin: 1em;
 }
 
@@ -48,4 +57,8 @@ article img{
     margin: 2em 3em 0em 3em;
     box-shadow: rgb(36, 36, 36) 5px 5px 40px;
     max-width: 15em
+}
+
+footer{
+    text-align: center;
 }

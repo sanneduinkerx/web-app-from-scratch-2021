@@ -2,7 +2,7 @@
 
 // Feedback: zet comments neer voor eigen duidelijkheid, niet in onload data meteen erin, fetch beter dan XML request, write separate functions not in onload 
 
-const request = new XMLHttpRequest(); 
+const request = new XMLHttpRequest(); // use fetch instead
 
 //url with values method, artist and API key
 const endpoint = 'https://ws.audioscrobbler.com/2.0/?method=';
@@ -11,15 +11,17 @@ let artist = 'acdc'; // let, because later on the value can change to a differen
 const apiKey = '9445b881096d29d7c6de9f9d2eb6b50d';
 let url = `${endpoint}${method}&artist=${artist}&api_key=${apiKey}&format=json`; // let because values change within url later
 
-const body = document.querySelector('body');
+// select body for later, later on will change
+const section = document.querySelector('section');
 
+//get data and load it
 request.open('GET', url, true);
 request.send();
 
 request.onload = function() {
     const data = JSON.parse(this.response);
     console.log(data);
-    
+
     retrieveData(data);
 };
 
@@ -43,7 +45,7 @@ function retrieveData(data){
                 img.src = loading.image[3]['#text'];
 
                 // appending elements in html
-                body.appendChild(article);
+                section.appendChild(article);
                 article.appendChild(img);
                 article.appendChild(p);
             });
