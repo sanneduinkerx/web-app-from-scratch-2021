@@ -1,5 +1,7 @@
 
-export function getData(artistName) {
+import { showResults } from './modules/render.js';
+
+export function getData(artistName,section) {
     // activated when user searchs a specific artist in input form
 
     // url api
@@ -10,11 +12,17 @@ export function getData(artistName) {
     const url = `${endpoint}${method}&artist=${artistName}&api_key=${apiKey}&format=json`; // in the url the artists value is de input that the user searched for
 
     // getting the data with fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-    fetch(url)
+  
+    return fetch(url)
         .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            return data;
+        .then(data => {            
+            console.log(data);         
+            showResults(data, section);
+            
+
+
         })
         .catch((err) => console.log('error')); // if url or api doesnt work it sends
-};
+
+
+ };
