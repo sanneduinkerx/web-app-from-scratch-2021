@@ -1,5 +1,4 @@
-
-import { showResults } from './modules/render.js';
+import { showResults } from './render.js';
 
 export function getData(artistName,section) {
     // activated when user searchs a specific artist in input form
@@ -17,7 +16,7 @@ export function getData(artistName,section) {
         .then(response => response.json())
         .then(data => {            
             console.log(data);         
-            showResults(data, section);
+            showResults(data, section, artistName );
             
 
 

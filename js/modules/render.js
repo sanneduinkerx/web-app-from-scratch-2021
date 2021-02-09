@@ -1,11 +1,11 @@
 // function which shows the results from the user search
-export function showResults(data, section){
+export function showResults(data, section, artistName){
 
     const topAlbum = data.topalbums.album;
 
     const searchResult = document.createElement('p');
 
-    searchResult.textContent = `Showing results for '${searchInput.value}'`; // feedback for user, knows where he/she searched for
+    searchResult.textContent = `Showing results for '${artistName}'`; // feedback for user, knows where he/she searched for
     section.appendChild(searchResult);
 
     // for each album, an article with the name and album image from the API
@@ -25,6 +25,4 @@ export function showResults(data, section){
         article.appendChild(img);
         article.appendChild(p);
     });
-
-    searchInput.value = ''; //input field empty after loading data
 }
