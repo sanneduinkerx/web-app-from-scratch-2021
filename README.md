@@ -18,14 +18,24 @@ You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scr
 [Rubric](https://docs.google.com/spreadsheets/d/1vJJ4EhIqkefWj1nWFp0Pnvy1Kld-S2V3qwZgC6XQO0c/edit?usp=sharing), with learning goals
 [Overall planning](https://teams.microsoft.com/l/file/95EAEC95-4AB8-4E62-A810-2445969460B6?tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7&fileType=xlsx&objectUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt%2FShared%20Documents%2F02%20-%20Web%20App%20From%20Scratch%2FWAFS%202021%20Planning.xlsx&baseUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt&serviceName=teams&threadId=19:9bd8abc7b32c4e0196ddbaae12cf8e79@thread.tacv2&groupId=5d001f9a-0a4b-4768-92b1-0f1768328ba3)
 
-## Proces
+# Proces
 
-### Week 1 - Hello API 🐒
+## Week 1 - Hello API 🐒
 <!-- Goal: Retrieve data from an API and render it in an overview page. -->
 
 This week I retrieved data from the LastFM API and rendered it in an overview page. As example i used ACDC to get all their top albums. i didn't put an input field, put i do want to put that in the web app. So the user can search different artists.
 
 ![](img/week1.png)
+
+## Week 2 - Design and Refactor 🛠
+
+### Actor Diagram
+![](img/actor-diagram.png)
+
+### Interaction Diagram
+
+![](img/interaction-diagram.png)
+
 
 <!-- [Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-2021/blob/master/course/week-1.md)
 
