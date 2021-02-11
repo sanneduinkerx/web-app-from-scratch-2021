@@ -1,6 +1,3 @@
 notes.md
-/.vscode
-.DS_Store
-/docs
-/examples
-/course
+'/.vscode'
+'.DS_Store'
