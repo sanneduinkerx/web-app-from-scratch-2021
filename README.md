@@ -4,15 +4,17 @@ In this course i learn to build a web application with vanilla HTML, CSS and Jav
 
 ## Web App - Album Libray
 In this web app you can find top albums of your favorite artists. And you can find more information and songs from that album.
+
 ![](img/week1.png)
-You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scratch-2021/)
-The proces of web app can be found [here](https://github.com/sanneduinkerx/web-app-from-scratch-2021/wiki/Proces).
+
+- You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scratch-2021/).
+- The **proces** of web app can be found [here](https://github.com/sanneduinkerx/web-app-from-scratch-2021/wiki/Proces).
 
 ## chosen API - Music API LastFM
 
 I've chosen the LastFM API and load the top albums from artists. The user can search for favorite artists and get top albums from that artist. Info about the API can be found [here](https://www.last.fm/api/show/artist.getTopAlbums)
 
-![](https://user-images.githubusercontent.com/60745348/107939578-3b3c2e80-6f87-11eb-8a0b-1e8a54964a61.png)
+![]
 
 ## Diagrams 🗂
 The Diagrams will change over time in this project when more actors are added later on.
