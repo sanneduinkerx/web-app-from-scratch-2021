@@ -8,7 +8,7 @@ I've chosen the LastFM API and load the top albums from artists. The user can se
 
 You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scratch-2021/)
 
-## Learning goals
+<!-- ## Learning goals
 
 * _You can add structure to your code by applying patterns. You can defend the choice for the chosen patterns_
 * _You can retrieve data, manipulate it and dynamically convert it to html elements using templating_
@@ -16,7 +16,7 @@ You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scr
 * _You understand how you can manage state in your application and you inform the user of state where necessary_
 
 [Rubric](https://docs.google.com/spreadsheets/d/1vJJ4EhIqkefWj1nWFp0Pnvy1Kld-S2V3qwZgC6XQO0c/edit?usp=sharing), with learning goals
-[Overall planning](https://teams.microsoft.com/l/file/95EAEC95-4AB8-4E62-A810-2445969460B6?tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7&fileType=xlsx&objectUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt%2FShared%20Documents%2F02%20-%20Web%20App%20From%20Scratch%2FWAFS%202021%20Planning.xlsx&baseUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt&serviceName=teams&threadId=19:9bd8abc7b32c4e0196ddbaae12cf8e79@thread.tacv2&groupId=5d001f9a-0a4b-4768-92b1-0f1768328ba3)
+[Overall planning](https://teams.microsoft.com/l/file/95EAEC95-4AB8-4E62-A810-2445969460B6?tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7&fileType=xlsx&objectUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt%2FShared%20Documents%2F02%20-%20Web%20App%20From%20Scratch%2FWAFS%202021%20Planning.xlsx&baseUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt&serviceName=teams&threadId=19:9bd8abc7b32c4e0196ddbaae12cf8e79@thread.tacv2&groupId=5d001f9a-0a4b-4768-92b1-0f1768328ba3) -->
 
 # Proces
 
@@ -30,11 +30,16 @@ This week I retrieved data from the LastFM API and rendered it in an overview pa
 ## Week 2 - Design and Refactor 🛠
 
 ### Actor Diagram
-![](img/actor-diagram.png)
+<!-- ![](img/actor-diagram.png) versie 1 -->
+![](https://user-images.githubusercontent.com/60745348/107937991-fd3e0b00-6f84-11eb-97ce-6e926c6ed8ff.png)
+<!-- <img width="847" alt="actor-diagram-v2" src="https://user-images.githubusercontent.com/60745348/107937991-fd3e0b00-6f84-11eb-97ce-6e926c6ed8ff.png"> -->
+
 
 ### Interaction Diagram
 
 ![](img/interaction-diagram.png)
+
+### Week 3 - Wrapping up 🎁
 
 
 <!-- [Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-2021/blob/master/course/week-1.md)
