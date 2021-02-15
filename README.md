@@ -1,20 +1,20 @@
 # Web App From Scratch @cmda-minor-web 2020 - 2021 
 
-In this course from the minor Web Design & Development, i learn to build a web application with vanilla HTML, CSS and Javascript. I will learn how to retrieve data from an API of my own choosing and how i can write vanilla Javascript.
+In this course, i learn to build a web application with vanilla HTML, CSS and Javascript. I will learn how to retrieve data from an API of my own choosing and how i can write vanilla Javascript.
 
 ## Table of contents
 
-- [Web App - Album Library 🎶](##%Web%App%-%Album%Libray%🎶)
-    * [Web Application Link](###%Web%Application%Link)
-    * [Process 📈](###%Process%📈)
-- [API - Music, LastFM 🎵](##%API%-%Music,%LastFM%🎵)
-- [Diagrams 🗂](##%Diagrams%🗂)
-    * [Actor Diagram](###%Actor%Diagram)
-    * [Interaction Diagram](###%Interaction%Diagram)
-- [Javascript Fundamentels](##%Javascript%Fundamentels%🔨)
-- [installation guide ⬇️](##%installation%guide%⬇️)
-- [Sources](##%Sources)
-
+- [Web App - Album Library 🎶](##%Web-App---Album-Libray-🎶)
+    * [Web Application Link](###-Web-Application-Link)
+    * [Process 📈](###-Process-📈)
+- [API - Music, LastFM 🎵](##-API---LastFM-🎵)
+- [Diagrams 🗂](##-Diagrams-🗂)
+    * [Actor Diagram](###-Actor-Diagram)
+    * [Interaction Diagram](###-Interaction-Diagram)
+- [Javascript Fundamentels](##-Javascript-Fundamentels-🔨)
+- [installation guide ⬇️](##-installation-guide-⬇️)
+- [Sources](##-Sources) 
+<!-- later aknowledgement + to do list? or in wiki to do every week-->
 
 ## Web App - Album Libray 🎶
 In this web app you can find top albums of your favorite artists. And you can find more information and songs from that album. 
@@ -27,7 +27,7 @@ You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scr
 ### Process 📈
 - The **process** of web app can be found [here](https://github.com/sanneduinkerx/web-app-from-scratch-2021/wiki/Proces).
 
-## API - Music, LastFM 🎵
+## API - LastFM 🎵
 
 I've chosen the LastFM API and load the top albums from artists. The user can search for favorite artists and get top albums from that artist. Info about the API can be found [here](https://www.last.fm/api/show/artist.getTopAlbums). 
 
