@@ -1,4 +1,6 @@
-html{
+/* basics */
+
+html {
     font-family: 'Roboto', sans-serif;
     color: white;
 
@@ -6,24 +8,29 @@ html{
     background: linear-gradient(90deg, rgba(34,0,27,1) 0%, rgba(119,9,121,1) 35%, rgba(0,212,255,1) 100%);  
     /* voor later, bewegende achtergrond gradiant https://codepen.io/P1N2O/pen/pyBNzX*/
 }
+
+/* HEADER */
+/* Layout - flexbox */
+
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-header h1{
+header h1 {
     font-size: 2.5em;
     margin: 1em;
 }
+
 /* form */
 
 header form {
     margin: 1em;
 }
 
-header form input{
+header form input {
     background-color: rgb(43, 43, 43);
     border-radius: 5px;
     color: white;
@@ -57,17 +64,21 @@ header form button:focus {
     outline: none;
 }
 
-header form button img{
+header form button img {
     width: 1em;
 }
 
+/* when user searches input field is small*/
+
+/* MAIN */
+/* main layout with grid, 3 columns */
 
 main section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-main section p:first-of-type{
+main section p:first-of-type {
     grid-column: span 3;
     text-align: center;
 }
@@ -76,8 +87,8 @@ main article {
     /* source: https://cssgradient.io/ */
     /* background: rgb(18,18,18);
     background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(34,34,34,1) 100%); */
+
     border-radius: 10px; 
-    /* box-shadow: rgb(36, 36, 36) 5px 5px 40px; */
     display: flex;
     flex-direction: column;
     margin: 1em;
@@ -85,28 +96,32 @@ main article {
     align-items: center;
 }
 
-main article:hover{
+main article:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-main article p{
+main article p {
     text-transform: uppercase;
     text-align: center;
     padding: 1em;
 }
 
-main article img{
+main article img {
     border-radius: 10px;
     margin: 2em 3em 0em 3em;
     box-shadow: rgb(36, 36, 36) 5px 5px 40px;
     max-width: 15em
 }
 
-footer{
+/* FOOTER */
+
+footer{ 
     text-align: center;
 }
 
+
+/* responsive website */
 @media (max-width: 69em) {
     main section {
         grid-template-columns: 1fr 1fr;
@@ -117,7 +132,6 @@ footer{
         grid-column: span 2;
         text-align: center;
     }
-    
 }
 
 @media (max-width: 45em) {

@@ -1,5 +1,5 @@
 import { showResults } from './modules/render.js';
-import { search } from './modules/search.js';
+import { searchArtist } from './modules/search.js';
 
 
 start();
@@ -7,9 +7,8 @@ start();
 function start() {
 
     
-    const searchResult = search();
+    const searchResult = searchArtist();
 
     //showResults(searchResult);
     
-
 }

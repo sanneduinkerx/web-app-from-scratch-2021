@@ -7,25 +7,25 @@ In this course, i learn to build a web application with vanilla HTML, CSS and Ja
 - [Web App - Album Library 🎶](#web-app---album-libray-)
     * [Web Application Link](#web-application-link)
     * [Process 📈](#process-)
-- [API - Music, LastFM 🎵](#api---music-lastfm-)
+- [API - LastFM 🎵](#api---music-lastfm-)
 - [Diagrams 🗂](#diagrams-)
     * [Actor Diagram](#actor-diagram)
     * [Interaction Diagram](#interaction-diagram)
 - [Javascript Fundamentels](#javascript-fundamentels-)
 - [installation guide ⬇️](#installation-guide-%EF%B8%8F)
 - [Sources](#sources) 
-<!-- later aknowledgement + to do list? or in wiki to do every week-->
+<!-- later aknowledgement (shoutout to who helped you making it) + to do list? or in wiki to do every week-->
 
 ## Web App - Album Libray 🎶
 In this web app you can find top albums of your favorite artists. And you can find more information and songs from that album. 
 
 ![](img/week1.png)
 
-### Web Application Link 
+### Web App Link 
 You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scratch-2021/).
 
 ### Process 📈
-- The **process** of web app can be found [here](https://github.com/sanneduinkerx/web-app-from-scratch-2021/wiki/Proces).
+The **process** of web app can be found [here](https://github.com/sanneduinkerx/web-app-from-scratch-2021/wiki/Proces).
 
 ## API - LastFM 🎵
 

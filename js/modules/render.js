@@ -4,8 +4,9 @@ export function showResults(data, section, artistName){
     const topAlbum = data.topalbums.album;
 
     const searchResult = document.createElement('p');
-
-    searchResult.textContent = `Showing results for '${artistName}'`; // feedback for user, knows where he/she searched for
+    
+    // feedback for user, knows where he/she searched for
+    searchResult.textContent = `Showing results for '${artistName}'`; 
     section.appendChild(searchResult);
 
     // for each album, an article with the name and album image from the API
