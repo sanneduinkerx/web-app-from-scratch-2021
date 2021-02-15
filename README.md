@@ -1,20 +1,37 @@
 # Web App From Scratch @cmda-minor-web 2020 - 2021 
 
-In this course i learn to build a web application with vanilla HTML, CSS and Javascript. I will learn how to retrieve data from an API of my own choosing.
+In this course from the minor Web Design & Development, i learn to build a web application with vanilla HTML, CSS and Javascript. I will learn how to retrieve data from an API of my own choosing and how i can write vanilla Javascript.
 
-## Web App - Album Libray
-In this web app you can find top albums of your favorite artists. And you can find more information and songs from that album.
+## Table of contents
+
+- [Web App - Album Library 🎶](##%Web%App%-%Album%Libray%🎶)
+    * [Web Application Link](###%Web%Application%Link)
+    * [Process 📈](###%Process%📈)
+- [API - Music, LastFM 🎵](##%API%-%Music,%LastFM%🎵)
+- [Diagrams 🗂](##%Diagrams%🗂)
+    * [Actor Diagram](###%Actor%Diagram)
+    * [Interaction Diagram](###%Interaction%Diagram)
+- [Javascript Fundamentels](##%Javascript%Fundamentels%🔨)
+- [installation guide ⬇️](##%installation%guide%⬇️)
+- [Sources](##%Sources)
+
+
+## Web App - Album Libray 🎶
+In this web app you can find top albums of your favorite artists. And you can find more information and songs from that album. 
 
 ![](img/week1.png)
 
-- You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scratch-2021/).
-- The **proces** of web app can be found [here](https://github.com/sanneduinkerx/web-app-from-scratch-2021/wiki/Proces).
+### Web Application Link 
+You can find the web app [here](https://sanneduinkerx.github.io/web-app-from-scratch-2021/).
 
-## chosen API - Music API LastFM
+### Process 📈
+- The **process** of web app can be found [here](https://github.com/sanneduinkerx/web-app-from-scratch-2021/wiki/Proces).
 
-I've chosen the LastFM API and load the top albums from artists. The user can search for favorite artists and get top albums from that artist. Info about the API can be found [here](https://www.last.fm/api/show/artist.getTopAlbums)
+## API - Music, LastFM 🎵
 
-![]
+I've chosen the LastFM API and load the top albums from artists. The user can search for favorite artists and get top albums from that artist. Info about the API can be found [here](https://www.last.fm/api/show/artist.getTopAlbums). 
+
+![](https://user-images.githubusercontent.com/60745348/107949699-f9ff4b00-6f95-11eb-9e98-a5ffa4456ba5.png)
 
 ## Diagrams 🗂
 The Diagrams will change over time in this project when more actors are added later on.
@@ -27,30 +44,33 @@ The Diagrams will change over time in this project when more actors are added la
 
 ![](img/interaction-diagram.png)
 
+## Javascript Fundamentels 🔨
 
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+## installation guide ⬇️
 
-<!-- ☝️ replace this description with a description of your own work -->
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+## Sources 
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
 
-<!-- Maybe a table of contents here? 📚 -->
+<!-- DONE Add a link to your live demo in Github Pages 🌐-->
+
+<!-- DONE ☝️ replace this description with a description of your own work -->
+
+<!-- DONE replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+
+<!-- DONE Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+
+<!-- DONE Maybe a table of contents here? 📚 -->
+
+<!-- DONE ...but how does one use this project? What are its features 🤔 -->
+
+<!-- DONE What external data source is featured in your project and what are its properties 🌠 -->
+
+
 
 <!-- How about a section that describes how to install this project? 🤓 -->
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ (IN WIKI)-->
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
-
-
-<!-- Proces -->
-<!-- Week1: This week I retrieved data from the LastFM API and rendered it in an overview page. As example i used ACDC to get all their top albums. i didn't put an input field, put i do want to put that in the web app. So the user can search different artists. -->
-
-<!-- Week 2: this week i split up my code into modules, also addeda new feature  -->
