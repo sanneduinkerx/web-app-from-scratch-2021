@@ -4,16 +4,16 @@ In this course, i learn to build a web application with vanilla HTML, CSS and Ja
 
 ## Table of contents
 
-- [Web App - Album Library 🎶](##%Web-App---Album-Libray-🎶)
-    * [Web Application Link](###-Web-Application-Link)
-    * [Process 📈](###-Process-📈)
-- [API - Music, LastFM 🎵](##-API---LastFM-🎵)
-- [Diagrams 🗂](##-Diagrams-🗂)
-    * [Actor Diagram](###-Actor-Diagram)
-    * [Interaction Diagram](###-Interaction-Diagram)
-- [Javascript Fundamentels](##-Javascript-Fundamentels-🔨)
-- [installation guide ⬇️](##-installation-guide-⬇️)
-- [Sources](##-Sources) 
+- [Web App - Album Library 🎶](#web-app---album-libray-)
+    * [Web Application Link](#web-application-link)
+    * [Process 📈](#process-)
+- [API - Music, LastFM 🎵](#api---music-lastfm-)
+- [Diagrams 🗂](#diagrams-)
+    * [Actor Diagram](#actor-diagram)
+    * [Interaction Diagram](#interaction-diagram)
+- [Javascript Fundamentels](#javascript-fundamentels-)
+- [installation guide ⬇️](#installation-guide-%EF%B8%8F)
+- [Sources](#sources) 
 <!-- later aknowledgement + to do list? or in wiki to do every week-->
 
 ## Web App - Album Libray 🎶
