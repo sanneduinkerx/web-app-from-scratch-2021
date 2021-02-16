@@ -4,7 +4,7 @@ export function showResults(data, section, artistName){
     const topAlbum = data.topalbums.album;
 
     const searchResult = document.createElement('p');
-    
+
     // feedback for user, knows where he/she searched for
     searchResult.textContent = `Showing results for '${artistName}'`; 
     section.appendChild(searchResult);
@@ -27,3 +27,7 @@ export function showResults(data, section, artistName){
         article.appendChild(p);
     });
 }
+
+// function albumDetail {
+
+// }
