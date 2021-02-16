@@ -14,20 +14,19 @@ export function showResults(data, section, artistName){
 
         // creating elements in HTML doc for the data  
         const article = document.createElement('article');
+        const link = document.createElement('a');
         const p = document.createElement('p');
         const img = document.createElement('img');
 
-        // filling source image and paragraph with name of album and image of album
+        // filling source image and paragraph with name of album and image of album + link has an href with the album neem #album
+        link.href = `#album/${loading.name}`; 
         p.textContent = loading.name;
         img.src = loading.image[3]['#text'];
 
         // appending elements in html
         section.appendChild(article);
-        article.appendChild(img);
-        article.appendChild(p);
+        article.appendChild(link);
+        link.appendChild(img);
+        link.appendChild(p);
     });
 }
-
-// function albumDetail {
-
-// }

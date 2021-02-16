@@ -7,6 +7,7 @@ export function searchArtist() {
     const searchForm = document.querySelector('form');
     const section = document.querySelector('section');
     const searchInput = document.querySelector('input'); 
+    const method = 'artist.gettopalbums'; 
  
     // eventlistener on form, when searching a keyword
     searchForm.addEventListener('submit', function search(e) {
@@ -16,15 +17,16 @@ export function searchArtist() {
             //  html section is empty to put new content in if user searches for another artist without refreshing
             section.innerHTML = ''; 
 
-            // classlist on header to change layout
-            // const header = document.querySelector('header');
-            // header.classList.remove('searchForm');
-
             // the keyword typed into the input field by the user, also known as an artist name 
-            const data = getApiData(searchInput.value, section); 
+            getApiData(searchInput.value, method, section); 
+
             // input field will be empty after searching for artist
             searchInput.value = '';  
 
-            return data;          
+            //class remove from header 
+            const header = document.querySelector('header');
+            header.classList.remove('searchForm');
+
+            // return data;          
         });
 }
