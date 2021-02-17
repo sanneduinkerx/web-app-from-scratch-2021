@@ -14,7 +14,6 @@ export function getApiData(artistName, method, section) {
     return fetch(url)
         .then(response => response.json())
         .then(data => {            
-            console.log(data);
             showResults(data, section, artistName);
         })
         // if url or api doesnt work it sends
