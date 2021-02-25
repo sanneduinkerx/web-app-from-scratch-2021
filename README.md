@@ -14,7 +14,7 @@ In this course, i learn to build a web application with vanilla HTML, CSS and Ja
 - [Javascript Fundamentels](#javascript-fundamentels-)
 - [installation guide ⬇️](#installation-guide-%EF%B8%8F)
 - [Sources](#sources) 
-<!-- later aknowledgement (shoutout to who helped you making it) + to do list? or in wiki to do every week-->
+<!-- later aknowledgement (shoutout to who helped you making it) -->
 
 ## Web App - Album Libray 🎶
 In this web app you can find top albums of your favorite artists. And you can find more information and songs from that album. 
@@ -51,7 +51,16 @@ The Diagrams will change over time in this project when more actors are added la
 
 
 ## Sources 
+Used sources to make web application:
 
+- Using fetch - MDN Web Docs, [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) 
+- Routie a tiny has router - Greg Allen 2016, [http://projects.jga.me/routie](http://projects.jga.me/routie)
+- Understanding client side routing by implementing a router - Will Taylor Blog, [https://www.willtaylor.blog/client-side-routing-in-vanilla-js/](https://www.willtaylor.blog/client-side-routing-in-vanilla-js/)
+- https://medium.com/swlh/lets-code-a-client-side-router-for-your-no-framework-spa-19da93105e10
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+
+## Aknowledgments
+A shoutout to team Roodbots 🙌🏼 for helping and giving good feedback to my web application. 
 
 <!-- DONE Add a link to your live demo in Github Pages 🌐-->
 
