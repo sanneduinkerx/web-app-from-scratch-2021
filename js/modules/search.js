@@ -1,5 +1,6 @@
 // import actor api.js, to call function
 import { getApiData } from './api.js';
+import { showResults } from './renderResults.js';
 
 const searchForm = document.querySelector('form');
 const searchInput = document.querySelector('input'); 
@@ -21,6 +22,7 @@ export function searchArtist() {
 
             // the artist name the user searches for
             const artistName = searchInput.value;
+            
             // in the url the artists value is de input that the user searched for, and the method is given with the function (artist.getTopAlbums)
             const url = `${endpoint}${method}&artist=${artistName}&api_key=${apiKey}&format=json`; 
 
@@ -28,13 +30,14 @@ export function searchArtist() {
             section.innerHTML = ''; 
 
             // the keyword typed into the input field by the user, also known as an artist name 
-            getApiData(url, section, artistName); 
+            getApiData(url).then(data => {            
+                showResults(data, section, artistName);
+            })
 
             // input field will be empty after searching for artist
-            searchInput.value = '';  
+            // searchInput.value = '';  
 
             //class remove from header
             header.classList.remove('searchForm');
-        
         });
 }
