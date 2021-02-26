@@ -1,11 +1,9 @@
-import { showResults } from './renderResults.js';
-
-// activated when user searchs a specific artist in input form
-export function getApiData(url, section, artistName) {
+// fetching api with given URL 
+export function getApiData(url) {
 
     // getting the data with fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     return fetch(url)
         .then(response => response.json())
-        // if url or api doesnt work it sends
+        // if url doesnt match or couldnt fetch api it sends an error message
         .catch((err) => console.log('error')); 
  };

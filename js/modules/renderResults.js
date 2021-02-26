@@ -9,23 +9,24 @@ export function showResults(data, section, artistName){
     section.appendChild(searchResult);
 
     // for each album, an article with the name and album image from the API
-    topAlbum.forEach(function (loading) {
+    topAlbum.forEach(function (albums) {
 
         // creating elements in HTML doc for the data  
         const article = document.createElement('article');
         const link = document.createElement('a');
-        const p = document.createElement('p');
+        const h2 = document.createElement('h2');
         const img = document.createElement('img');
 
         // filling source image and paragraph with name of album and image of album + link has an href with the album neem #album
-        link.href = `#album/${loading.name}`; 
-        p.textContent = loading.name;
-        img.src = loading.image[3]['#text'];
+        // link from every article around an album, has its own link with the album name for the routie
+        link.href = `#album/${albums.name}`; 
+        h2.textContent = albums.name;
+        img.src = albums.image[3]['#text'];
 
         // appending elements in html
         section.appendChild(article);
         article.appendChild(link);
         link.appendChild(img);
-        link.appendChild(p);
+        link.appendChild(h2);
     });
 }

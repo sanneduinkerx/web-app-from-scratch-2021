@@ -1,24 +1,37 @@
 import { getApiData } from './api.js';
-
-const section = document.querySelector('section');
-const searchInput = document.querySelector('input'); 
-
-const endpoint = 'https://ws.audioscrobbler.com/2.0/?method=';
-const apiKey = '9445b881096d29d7c6de9f9d2eb6b50d';
+import { endpoint, apiKey, section, searchInput} from './search.js';
 
 export function detailPage(albumName) {
-    const artistName = searchInput.value;
-    const method = 'album.getinfo'; 
-    const url = `${endpoint}${method}&api_key=${apiKey}&artist=${artistName}&album=${albumName}&format=json`; 
 
-    console.log(url);
+    const artistName = searchInput.value;
+    const methodGetinfo = 'album.getinfo'; 
+    const urlAlbumInfo = `${endpoint}${methodGetinfo}&api_key=${apiKey}&artist=${artistName}&album=${albumName}&format=json`; 
+
+    console.log(urlAlbumInfo);
     section.innerHTML = ''; 
 
-    getApiData(url).then(data => {            
-        render(data);
-    });
+    getApiData(urlAlbumInfo)
+        .then(data => {render(data)})
 };
 
 function render(data){
     console.log(data);
-}
+
+    // create elements
+    const p = document.createElement('p');
+    const cover = document.createElement('img');
+    const title = document.createElement('h1');
+    const div = document.createElement('div');
+
+    // fill elements with content from API
+    section.classList.add('Albuminfo');
+    p.textContent = data.album.wiki.content;
+    cover.src = data.album.image[4]['#text'];
+    title.textContent = `${data.album.artist} - ${data.album.name}`;
+
+    // append to html elements
+    section.appendChild(div);
+    div.appendChild(title);
+    div.appendChild(cover);
+    div.appendChild(p);
+};

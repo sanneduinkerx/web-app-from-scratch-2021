@@ -13,8 +13,10 @@ const apiKey = '9445b881096d29d7c6de9f9d2eb6b50d';
 const method = 'artist.gettopalbums'; 
 
 //when user searches with a keyword for a specific artist, this function runs
-export function searchArtist() {
- 
+function searchArtist() {
+
+    section.classList.remove('Albuminfo');
+
     // eventlistener on form, when searching a keyword
     searchForm.addEventListener('submit', function search(e) {
             // e is the event, this time the submit event when user pushed button or enter when typing in keyword
@@ -30,14 +32,18 @@ export function searchArtist() {
             section.innerHTML = ''; 
 
             // the keyword typed into the input field by the user, also known as an artist name 
-            getApiData(url).then(data => {            
-                showResults(data, section, artistName);
-            })
+            getApiData(url).then(albumsData => {            
+                showResults(albumsData, section, artistName);
+            });
 
             // input field will be empty after searching for artist
             // searchInput.value = '';  
 
             //class remove from header
             header.classList.remove('searchForm');
+            //if there's a class .albuminfo in section it gets removed
+            section.classList.remove('Albuminfo');
         });
 }
+
+export {searchArtist, endpoint, apiKey, section, searchInput};
