@@ -3,6 +3,7 @@ import { endpoint, apiKey, section, searchInput} from './search.js';
 
 export function detailPage(albumName) {
 
+    //new method and artistName and new URL to get album details, 
     const artistName = searchInput.value;
     const methodGetinfo = 'album.getinfo'; 
     const urlAlbumInfo = `${endpoint}${methodGetinfo}&api_key=${apiKey}&artist=${artistName}&album=${albumName}&format=json`; 
@@ -10,6 +11,7 @@ export function detailPage(albumName) {
     console.log(urlAlbumInfo);
     section.innerHTML = ''; 
 
+    //
     getApiData(urlAlbumInfo)
         .then(data => {render(data)})
 };
