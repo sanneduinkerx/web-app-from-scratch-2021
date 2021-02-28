@@ -1,7 +1,7 @@
 import { getApiData } from './api.js';
 import { endpoint, apiKey, section, searchInput} from './search.js';
 
-export function detailPage(albumName) {
+export async function detailPage(albumName) {
 
     //new method and artistName and new URL to get album details, 
     const artistName = searchInput.value;
@@ -12,8 +12,16 @@ export function detailPage(albumName) {
     section.innerHTML = ''; 
 
     //
-    getApiData(urlAlbumInfo)
-        .then(data => {render(data)})
+    const apiData = await getApiData(urlAlbumInfo);
+
+    // if(apiData.album.wiki.content){
+    //     render(apiData);
+    // } else(!apiData.album.wiki.content) {
+    //     dataNotFound();
+    // };
+    render(apiData);
+    // getApiData(urlAlbumInfo)
+    //     .then(data => {render(data)})
 };
 
 function render(data){
@@ -37,3 +45,7 @@ function render(data){
     div.appendChild(cover);
     div.appendChild(p);
 };
+
+// function dataNotFound(){
+//     console.log('Data not found');
+// }
