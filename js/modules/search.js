@@ -15,10 +15,8 @@ const method = 'artist.gettopalbums';
 //when user searches with a keyword for a specific artist, this function runs
 function searchArtist() {
 
-    section.classList.remove('Albuminfo');
-
     // eventlistener on form, when searching a keyword
-    searchForm.addEventListener('submit', function search(e) {
+    searchForm.addEventListener('submit', async function search(e) {
             // e is the event, this time the submit event when user pushed button or enter when typing in keyword
             e.preventDefault();
 
@@ -32,9 +30,16 @@ function searchArtist() {
             section.innerHTML = ''; 
 
             // the keyword typed into the input field by the user, also known as an artist name 
-            getApiData(url).then(albumsData => {            
-                showResults(albumsData, section, artistName);
-            });
+            // getApiData(url).then(albumsData => {            
+            //     showResults(albumsData, section, artistName);
+            // });
+
+            // awaits until data is available, then runs function showResults()
+            const apiData = await getApiData(url);
+            
+            //filter apiData
+           const filteredData = Object.values(apiData.topalbums.album).filter(noImg => noImg.image[3]['#text'] != "");
+            showResults(filteredData, section, artistName);
 
             // input field will be empty after searching for artist
             // searchInput.value = '';  
@@ -46,4 +51,5 @@ function searchArtist() {
         });
 }
 
+// exporting function and variables needed in other modules
 export {searchArtist, endpoint, apiKey, section, searchInput};
