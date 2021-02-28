@@ -1,15 +1,13 @@
 // function which shows the results from the user search
-export function showResults(data, section, artistName){
-
-    // const topAlbum = data.topalbums.album;
-    const searchResult = document.createElement('p');
+export function showResults(filteredData, section){
+    const searchResult = document.createElement('h1');
 
     // feedback for user, knows where he/she searched for
-    searchResult.textContent = `Showing results for '${artistName}'`; 
+    searchResult.textContent = `Showing results for '${filteredData[0].artist.name}'`; 
     section.appendChild(searchResult);
 
     // for each album, an article with the name and album image from the API
-    data.forEach((albums) => {
+    filteredData.forEach((albums) => {
 
             // creating elements in HTML doc for the data  
             const article = document.createElement('article');

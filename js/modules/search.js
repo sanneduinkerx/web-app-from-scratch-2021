@@ -11,6 +11,7 @@ const header = document.querySelector('header');
 const endpoint = 'https://ws.audioscrobbler.com/2.0/?method=';
 const apiKey = '9445b881096d29d7c6de9f9d2eb6b50d';
 const method = 'artist.gettopalbums'; 
+let artistName;
 
 //when user searches with a keyword for a specific artist, this function runs
 function searchArtist() {
@@ -21,26 +22,28 @@ function searchArtist() {
             e.preventDefault();
 
             // the artist name the user searches for
-            const artistName = searchInput.value;
+            artistName = searchInput.value;
             
             // in the url the artists value is de input that the user searched for, and the method is given with the function (artist.getTopAlbums)
             const url = `${endpoint}${method}&artist=${artistName}&api_key=${apiKey}&format=json`; 
 
-            //  html section is empty to put new content in if user searches for another artist without refreshing
-            section.innerHTML = ''; 
-
             // awaits until data is available, then runs function showResults()
             const apiData = await getApiData(url);
-            
+
+            //  html section is empty to put new content in if user searches for another artist without refreshing
+            section.innerHTML = '';
+
             //filter apiData
             filter(apiData);
-
+            
             //class remove from header
             header.classList.remove('searchForm');
             //if there's a class .albuminfo in section it gets removed
             section.classList.remove('Albuminfo');
+            section.classList.remove('error');
+
         });
 }
 
 // exporting function and variables needed in other modules
-export {searchArtist, endpoint, apiKey, section, searchInput};
+export {searchArtist, endpoint, apiKey, section, artistName};

@@ -9,6 +9,10 @@ html {
     /* voor later, bewegende achtergrond gradiant https://codepen.io/P1N2O/pen/pyBNzX*/
 }
 
+body{
+    position: relative;
+}
+
 /* HEADER */
 /* Layout - flexbox */
 
@@ -100,16 +104,20 @@ header p{
 /* MAIN */
 /* main layout with grid, 3 columns */
 
+/* main section h1{
+
+} */
+
 main section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-main .Albuminfo {
+main .Albuminfo, main .error {
     display: block;
 }
 
-main section p:first-of-type {
+main section h1{
     grid-column: span 3;
     text-align: center;
 }
@@ -151,10 +159,47 @@ main article a {
     text-decoration: none;
 }
 
+/* detail page styling */
+
+main section div{
+    max-width: 21em;
+    margin: auto;
+}
+
+main section div a{
+    color: rgb(255, 168, 7);
+}
+
+/* error message */
+
+section p{
+    text-align: center;
+}
+
+main .error{
+    width: 20em;
+    height: 8em;
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    padding: .5em;
+    border-radius: 10px;
+}
+
+
 /* FOOTER */
 
 footer{ 
     text-align: center;
+    /* source footer at bottom: https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -165,18 +210,23 @@ footer{
         
     }
 
-    main section p:first-of-type{
+    main section h1{
         grid-column: span 2;
         text-align: center;
     }
 }
 
 @media (max-width: 45em) {
+
+    header {
+        flex-direction: column;
+    }
+
     main section {
         grid-template-columns: 1fr ;
     }
 
-    main section p:first-of-type{
+    main section h1{
         grid-column: span 1;
         text-align: center;
     }
