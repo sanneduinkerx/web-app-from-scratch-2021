@@ -1,6 +1,6 @@
 // import actor api.js, to call function
 import { getApiData } from './api.js';
-import { showResults } from './renderResults.js';
+import { filter } from './filter.js';
 
 const searchForm = document.querySelector('form');
 const searchInput = document.querySelector('input'); 
@@ -29,20 +29,11 @@ function searchArtist() {
             //  html section is empty to put new content in if user searches for another artist without refreshing
             section.innerHTML = ''; 
 
-            // the keyword typed into the input field by the user, also known as an artist name 
-            // getApiData(url).then(albumsData => {            
-            //     showResults(albumsData, section, artistName);
-            // });
-
             // awaits until data is available, then runs function showResults()
             const apiData = await getApiData(url);
             
             //filter apiData
-           const filteredData = Object.values(apiData.topalbums.album).filter(noImg => noImg.image[3]['#text'] != "");
-            showResults(filteredData, section, artistName);
-
-            // input field will be empty after searching for artist
-            // searchInput.value = '';  
+            filter(apiData);
 
             //class remove from header
             header.classList.remove('searchForm');
