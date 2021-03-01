@@ -1,4 +1,4 @@
-//error state - when there is no data to be shown
+//error state - when there is no data to be shown, when promise returns an error
 export function dataNotFound(section){
     // creating elements for error message
     const heading = document.createElement('h1');

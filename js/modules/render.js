@@ -1,5 +1,5 @@
 // rendering all albums from searched artist from user
-export function showResults(filteredData, section){
+export function renderAlbumResults(filteredData, section){
     const searchResult = document.createElement('h1');
 
     // feedback for user, knows where he/she searched for

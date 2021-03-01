@@ -1,8 +1,10 @@
-//imported modules
+//imported functions from modules
 import { getApiData } from './api.js';
-import { endpoint, apiKey, section, header } from './search.js';
 import { dataNotFound } from './states.js';
 import { renderDetailPage } from './render.js'
+
+//imported variables from module
+import { endpoint, apiKey, section, header } from './search.js';
 
 // async function fetching detail Page info, with the parameter albumName 
 export async function detailPage(albumName, artist) {
@@ -11,7 +13,7 @@ export async function detailPage(albumName, artist) {
     section.innerHTML = ''; 
     header.classList.remove('searchForm');
 
-    // new methode in URL to get json
+    // new methode in URL to get data
     const methodGetinfo = 'album.getinfo'; 
     //URL to fetch 
     const urlAlbumInfo = `${endpoint}${methodGetinfo}&api_key=${apiKey}&artist=${artist}&album=${albumName}&format=json`; 
@@ -21,6 +23,7 @@ export async function detailPage(albumName, artist) {
         const apiData =  await getApiData(urlAlbumInfo);
         renderDetailPage(apiData, section);
     } catch (error) {
+        //if there was an error in the promise the following function gets called with an error message
         dataNotFound(section);
     }
 };
