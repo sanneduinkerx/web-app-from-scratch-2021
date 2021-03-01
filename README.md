@@ -42,7 +42,7 @@ The Diagrams will change over time in this project if more actors are added late
 
 ### Interaction Diagram
 
-![](https://user-images.githubusercontent.com/60745348/109554899-273f1380-7ad5-11eb-8d94-824b06d7e35c.pn)
+![](https://user-images.githubusercontent.com/60745348/109558249-6ff8cb80-7ad9-11eb-9132-8fac38ffe1da.png)
 
 ## Wishlist 📋
 
