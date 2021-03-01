@@ -17,7 +17,7 @@ export function showResults(filteredData, section){
 
             // filling source image and paragraph with name of album and image of album + link has an href with the album neem #album
             // link from every article around an album, has its own link with the album name for the routie
-            link.href = `#album/${albums.name}`;
+            link.href = `#album/${albums.name}/${filteredData[0].artist.name}`;
             h2.textContent = albums.name;
             img.src = albums.image[3]['#text'];
 
