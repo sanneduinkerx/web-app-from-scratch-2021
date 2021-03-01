@@ -17,8 +17,14 @@ export function dataNotFound(section){
 }
 
 //loading state when url is being fetched
-export async function loading(){
-    console.log('loading');
-    const heading = document.createElement('h1');
-    heading.textContent = 'Please wait while we get the information.'
+export function loading(){
+
+    const divLoading = document.querySelector('body > div');
+    divLoading.classList.add('loadingState'); 
+
+    //source: https://www.w3schools.com/jsref/met_win_settimeout.asp
+    setTimeout(function loadingOff(){
+        console.log('ello');
+        divLoading.classList.remove('loadingState');  
+    }, [800]);
 }

@@ -1,7 +1,7 @@
 // imported modules
-import { getApiData } from './api.js';
+import { fetchData } from './api.js';
 import { renderAlbumResults } from './render.js';
-import { dataNotFound } from './states.js';
+import { dataNotFound, loading } from './states.js';
 
 //selecting elements in de DOM to trigger eventlistener
 const searchForm = document.querySelector('form');
@@ -41,8 +41,10 @@ async function search(e){
 
     // try.. catch for error message if promise gives an error
     try{
+        //loading function called 
+        loading();
         // awaits until data is available, then filters then runs function showResults()
-        const apiData = await getApiData(url);
+        const apiData = await fetchData(url);
 
         //filter apiData - all objects without an image gets filtered out
         //object.values, source: https://stackoverflow.com/questions/55458675/filter-is-not-a-function
@@ -50,11 +52,12 @@ async function search(e){
         
         //funtion gets called and given the parameter filteredData 
         renderAlbumResults(filteredData, section);
+        
         section.classList.remove('error');
     } catch (error) {
         //if there was an error in the promise the following function gets called with an error message
         dataNotFound(section);
-    };
+    } 
 
     // search input empty, so that user can search a different artist immediatly when he/she wants
     searchInput.value = '';

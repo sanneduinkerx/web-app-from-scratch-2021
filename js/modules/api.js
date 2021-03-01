@@ -1,5 +1,5 @@
 // fetching api with given URL 
-export async function getApiData(url) {
+export async function fetchData(url) {
 
     // getting the data with fetch
     //source: https://stackoverflow.com/questions/59394620/why-fetch-returns-promise-pending

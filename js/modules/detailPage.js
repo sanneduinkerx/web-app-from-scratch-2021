@@ -1,6 +1,6 @@
 //imported functions from modules
-import { getApiData } from './api.js';
-import { dataNotFound } from './states.js';
+import { fetchData } from './api.js';
+import { dataNotFound, loading } from './states.js';
 import { renderDetailPage } from './render.js'
 
 //imported variables from module
@@ -20,10 +20,11 @@ export async function detailPage(albumName, artist) {
 
     //fetch api data, details from an album, try/catch when api couldnt get fetched error messages gets shown
     try{
-        const apiData =  await getApiData(urlAlbumInfo);
+        loading();
+        const apiData =  await fetchData(urlAlbumInfo);
         renderDetailPage(apiData, section);
     } catch (error) {
         //if there was an error in the promise the following function gets called with an error message
         dataNotFound(section);
-    }
+    } 
 };
