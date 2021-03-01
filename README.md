@@ -61,6 +61,7 @@ Used sources to make web application:
 - filter is not a function, stackoverflow - [https://stackoverflow.com/questions/55458675/filter-is-not-a-function](https://stackoverflow.com/questions/55458675/filter-is-not-a-function)
 - String methods - [https://www.w3schools.com/js/js_string_methods.asp](https://www.w3schools.com/js/js_string_methods.asp)
 - SetTimeOut, MDN web docs - https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+- Loader CSS - [https://loading.io/css/](https://loading.io/css/)
 
 ## Acknowledgments 🙌🏼
 A shoutout to team [Roodbots](https://bvictorb.github.io/teampagina/) 🙌🏼 for helping and giving good feedback to my web application. 
