@@ -162,25 +162,32 @@ main article a {
 /* detail page styling */
 
 main section div{
-    max-width: 21em;
-    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 main section div a{
     color: rgb(255, 168, 7);
 }
 
+main section div p{
+    width: 20rem;
+}
+
+
 /* songs */
 
 main section ul{
     list-style: none;
+    width: 44rem;
 }
 
 main section ul li {
     padding: .5em;
     margin: .5em;
     border: 1px white solid;
-    width: 10rem;
+    /* width: 10rem; */
 }
 
 main section div h2{
@@ -189,9 +196,8 @@ main section div h2{
 
 main .Albuminfo{
     display: grid;
-    justify-content: center;
-    align-self: center;
-    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-template-columns: 1fr 2fr;
 }
 
 main .Albuminfo h1{
