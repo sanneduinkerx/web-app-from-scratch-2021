@@ -1,4 +1,4 @@
-import { detailPage } from './modules/renderDetail.js';
+import { detailPage } from './modules/detailPage.js';
 import { searchArtist } from './modules/search.js';
 
 router();

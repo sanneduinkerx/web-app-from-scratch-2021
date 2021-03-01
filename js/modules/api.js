@@ -9,8 +9,8 @@ export async function getApiData(url) {
         .then(response => response.json())
         // if url doesnt match or couldnt fetch api it sends an error message
         .catch((error) => {
-            return console.log(error);
+            console.log(error);
         }); 
-
+        
     return apiData;
  };

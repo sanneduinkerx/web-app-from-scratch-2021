@@ -14,7 +14,8 @@ In this course, i learn to build a web application with vanilla HTML, CSS and Ja
 - [Javascript Fundamentels](#javascript-fundamentels-)
 - [installation guide ⬇️](#installation-guide-%EF%B8%8F)
 - [Sources](#sources) 
-<!-- later aknowledgement (shoutout to who helped you making it) -->
+- [Acknowledgments](#Acknowledgments) 
+
 
 ## Web App - Album Libray 🎶
 In this web app you can find top albums of your favorite artists. And you can find more information and songs from that album. 
@@ -58,28 +59,14 @@ Used sources to make web application:
 - Understanding client side routing by implementing a router - Will Taylor Blog, [https://www.willtaylor.blog/client-side-routing-in-vanilla-js/](https://www.willtaylor.blog/client-side-routing-in-vanilla-js/)
 - https://medium.com/swlh/lets-code-a-client-side-router-for-your-no-framework-spa-19da93105e10
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+- https://stackoverflow.com/questions/59394620/why-fetch-returns-promise-pending
+- https://stackoverflow.com/questions/55458675/filter-is-not-a-function
+- https://www.w3schools.com/js/js_string_methods.asp
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 
-## Aknowledgments
-A shoutout to team Roodbots 🙌🏼 for helping and giving good feedback to my web application. 
-
-<!-- DONE Add a link to your live demo in Github Pages 🌐-->
-
-<!-- DONE ☝️ replace this description with a description of your own work -->
-
-<!-- DONE replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- DONE Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- DONE Maybe a table of contents here? 📚 -->
-
-<!-- DONE ...but how does one use this project? What are its features 🤔 -->
-
-<!-- DONE What external data source is featured in your project and what are its properties 🌠 -->
-
-
+## Acknowledgments
+A shoutout to team [Roodbots](https://bvictorb.github.io/teampagina/) 🙌🏼 for helping, ideas and giving good feedback to my web application. 
 
 <!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ (IN WIKI)-->
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->

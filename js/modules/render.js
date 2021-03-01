@@ -1,40 +1,41 @@
-//imported modules
-import { getApiData } from './api.js';
-import { endpoint, apiKey, section, artistName} from './search.js';
-import { dataNotFound } from './states.js';
+// rendering all albums from searched artist from user
+export function showResults(filteredData, section){
+    const searchResult = document.createElement('h1');
 
-// async function fetching detail Page info, with the parameter albumName 
-export async function detailPage(albumName) {
+    // feedback for user, knows where he/she searched for
+    searchResult.textContent = `Showing results for '${filteredData[0].artist.name}'`; 
+    section.appendChild(searchResult);
 
-    //if artistName is empty then nothing
-    if(artistName != ""){
-        // new methode in URL to get json
-        const methodGetinfo = 'album.getinfo'; 
-        //URL to fetch 
-        const urlAlbumInfo = `${endpoint}${methodGetinfo}&api_key=${apiKey}&artist=${artistName}&album=${albumName}&format=json`; 
+    // for each album, an article with the name and album image from the API
+    filteredData.forEach((albums) => {
 
-        console.log(urlAlbumInfo);
-        // section empty, so the new content with details can get in
-        section.innerHTML = ''; 
+            // creating elements in HTML doc for the data  
+            const article = document.createElement('article');
+            const link = document.createElement('a');
+            const h2 = document.createElement('h2');
+            const img = document.createElement('img');
 
-        //fetch api data, details from an album
-        const apiData = await getApiData(urlAlbumInfo);
-        
-        // if/else statement for error message if some data is missing and de wiki is undefined then the function dataNotFound wil run
-        if(apiData.album.wiki == undefined){
-            dataNotFound(section);
-        } else{
-            renderDetailPage(apiData);
-        };
-    } 
-};
+            // filling source image and paragraph with name of album and image of album + link has an href with the album neem #album
+            // link from every article around an album, has its own link with the album name for the routie
+            link.href = `#album/${albums.name}`;
+            h2.textContent = albums.name;
+            img.src = albums.image[3]['#text'];
+
+            // appending elements in html
+            section.appendChild(article);
+            article.appendChild(link);
+            link.appendChild(img);
+            link.appendChild(h2);
+        });
+}
 
 //rendering detail page 
-function renderDetailPage(data){
+export function renderDetailPage(data, section){
 
     // create elements
     const title = document.createElement('h1');
     const div = document.createElement('div');
+    const listSongs = document.createElement('ul');
     const cover = document.createElement('img');
     const listeners = document.createElement('p');
     const playcount = document.createElement('p');
@@ -68,9 +69,17 @@ function renderDetailPage(data){
     listeners.textContent = `Listeners: ${data.album.listeners}`;
     playcount.textContent = `Playcount: ${data.album.playcount}`;
 
+    // all the tracks from the album in a list item
+    data.album.tracks.track.forEach((track) => {
+        const li = document.createElement('li');
+        li.textContent = track.name;
+        listSongs.appendChild(li);
+    });
+
     // append to html elements
     section.appendChild(title);
     section.appendChild(div);
+    section.appendChild(listSongs);
     div.appendChild(cover);
     div.appendChild(listeners);
     div.appendChild(playcount);
