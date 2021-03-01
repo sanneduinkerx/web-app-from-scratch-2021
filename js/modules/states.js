@@ -22,6 +22,7 @@ export function loading(){
     const divLoading = document.querySelector('body > div');
     divLoading.classList.add('loadingState'); 
 
+    //setTimeout, after 800ms classlist is removed: loading state is removed after 800ms
     //source: https://www.w3schools.com/jsref/met_win_settimeout.asp
     setTimeout(function loadingOff(){
         console.log('ello');
