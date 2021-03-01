@@ -35,12 +35,14 @@ export function renderDetailPage(data, section){
     // create elements
     const title = document.createElement('h1');
     const div = document.createElement('div');
+    const divSongs = document.createElement('div');
     const listSongs = document.createElement('ul');
     const cover = document.createElement('img');
     const listeners = document.createElement('p');
     const playcount = document.createElement('p');
     const summary = document.createElement('p');
     const a = document.createElement('a');
+    const tracks = document.createElement('h2');
 
     // splitting and retrieving pieces from string //
     // source: https://www.w3schools.com/js/js_string_methods.asp
@@ -68,6 +70,7 @@ export function renderDetailPage(data, section){
     cover.src = data.album.image[4]['#text'];
     listeners.textContent = `Listeners: ${data.album.listeners}`;
     playcount.textContent = `Playcount: ${data.album.playcount}`;
+    tracks.textContent = 'Tracks';
 
     // all the tracks from the album in a list item
     data.album.tracks.track.forEach((track) => {
@@ -79,7 +82,9 @@ export function renderDetailPage(data, section){
     // append to html elements
     section.appendChild(title);
     section.appendChild(div);
-    section.appendChild(listSongs);
+    section.appendChild(divSongs);
+    divSongs.appendChild(tracks);
+    divSongs.appendChild(listSongs);
     div.appendChild(cover);
     div.appendChild(listeners);
     div.appendChild(playcount);

@@ -9,7 +9,7 @@ export function dataNotFound(section){
 
      //filling elements with content feedback to the user
     heading.textContent = "We're sorry!"
-    errorMessage.textContent = "We couldn't find the information you were looking for 😞. Maybe try a different one.";
+    errorMessage.textContent = "We couldn't find the information you were looking for 😞. Maybe try something else.";
 
     //append to elements
     section.appendChild(heading);
@@ -17,6 +17,8 @@ export function dataNotFound(section){
 }
 
 //loading state when url is being fetched
-export function loading(){
+export async function loading(){
     console.log('loading');
+    const heading = document.createElement('h1');
+    heading.textContent = 'Please wait while we get the information.'
 }
