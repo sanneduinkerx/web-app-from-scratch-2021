@@ -48,7 +48,10 @@ The Diagrams will change over time in this project if more actors are added late
 
 Things I want to add/change in the future:
 - Make web app more user friendly
+- refactor waterfall code to returning values
 - Loading state different in design and coding
+- A back link on detailpage to go back to search results from an artist
+- error and loading state called in api.js
 
 ## Sources 📚
 Used sources to make web application:
@@ -58,7 +61,9 @@ Used sources to make web application:
 - Understanding client side routing by implementing a router - Will Taylor Blog, [https://www.willtaylor.blog/client-side-routing-in-vanilla-js/](https://www.willtaylor.blog/client-side-routing-in-vanilla-js/)
 - defer script, MDN Web Docs - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 - why fetch returns promise pending, stackoverflow - [https://stackoverflow.com/questions/59394620/why-fetch-returns-promise-pending](https://stackoverflow.com/questions/59394620/why-fetch-returns-promise-pending)
+- Async await, MDN web docs - [https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
 - filter is not a function, stackoverflow - [https://stackoverflow.com/questions/55458675/filter-is-not-a-function](https://stackoverflow.com/questions/55458675/filter-is-not-a-function)
+- Try catch, MDN web docs - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 - String methods - [https://www.w3schools.com/js/js_string_methods.asp](https://www.w3schools.com/js/js_string_methods.asp)
 - SetTimeOut, MDN web docs - https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 - Loader CSS - [https://loading.io/css/](https://loading.io/css/)
