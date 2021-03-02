@@ -18,7 +18,7 @@ export function dataNotFound(section){
 
 //loading state when url is being fetched
 export function loading(){
-
+    //adding class to the loading div to trigger loading state
     const divLoading = document.querySelector('body > div');
     divLoading.classList.add('loadingState'); 
 

@@ -2,7 +2,6 @@
 import { fetchData } from './api.js';
 import { dataNotFound, loading } from './states.js';
 import { renderDetailPage } from './render.js'
-
 //imported variables from module
 import { endpoint, apiKey, section, header } from './search.js';
 
